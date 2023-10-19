@@ -1,0 +1,44 @@
+<div class="container my-5">
+
+    <!-- <div *ngIf="!registerMode">
+        <div class="row">
+            <h2>Fun Starts here!</h2>
+        </div>
+        <div class="row">
+            <button class="btn btn-success btn-sm col-2 me-3" (click)="registerModeToggle()">Register</button>
+            <button class="btn btn-success btn-sm col-2 me-3">Read about</button>
+        </div>
+    </div>
+
+    <div *ngIf="registerMode">
+        <div class="row">
+            <app-register [usersFromHomeComponent]="users" (cancelRegister)="cancelRegisterMode($event)"></app-register>
+        </div>
+    </div> -->
+
+    <div class="bg-primary p-5 rounded">
+        <div *ngIf="registerMode">
+            <div class="row">
+                <app-register [usersFromHomeComponent]="users"
+                    (cancelRegister)="cancelRegisterMode($event)"></app-register>
+            </div>
+        </div>
+
+        <div *ngIf="!registerMode">
+            <div class="row">
+                <h2>Fun Starts here!</h2>
+                <p class="lead">Intuitive, useful; simplify the sales administration never been easier.</p>
+                    <p> Login or Register to Start!.</p>
+            </div>
+            <div class="row">
+                <button class="btn btn-secondary btn-sm col-2 me-3" (click)="registerModeToggle()">Register</button>
+                <button class="btn btn-secondary btn-sm col-2 me-3">Read about</button>
+                <!-- <a class="btn btn-lg btn-primary" href="/docs/5.3/components/navbar/" role="button">View navbar docs »</a> -->
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
